@@ -1,0 +1,18 @@
+{
+	"name": "elearn",
+	"manifest_version": 2,
+	"version": "1.0",
+	"description": "Support elearing lecture for non-IE browsers",
+	"icons": { 
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png" 
+	},
+	"permissions": ["https://elearning.jejunu.ac.kr/Lesson.do*"],
+	"content_scripts": [
+		{
+			"matches": ["https://elearning.jejunu.ac.kr/Lesson.do?cmd=viewStudyContentsForm&studyRecordDTO.lessonElementId=*"],
+			"js": ["index.js"]
+		}
+	]
+}

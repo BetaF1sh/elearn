@@ -4,7 +4,7 @@ const frame = document.querySelector('iframe#bodyFrame')
 const INTERVAL = 100;
 const trigger = setInterval(async function() {
 	if (regex.test(frame.src)){
-		open(frame.src, "_blank", "width=1060, height=689");
+		open(frame.src, "_blank", "width=" + window.innerWidth + ", height=" + window.innerHeight);
 		clearInterval(trigger)
 	}
 }, INTERVAL);
